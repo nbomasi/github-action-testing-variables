@@ -8,7 +8,7 @@ env:
   REPOSITORY_v: ${{ vars.REPOSITORY_VAR }}
   ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
   OVERRIDE_VAR: ${{ vars.OVERRIDE_VAR }}
-  STAGING_ENV:  ${{ vars.STAGING_ENV }}
+  #STAGING_ENV:  ${{ vars.STAGING_ENV }}
 
 jobs:
   display-variables:
@@ -26,6 +26,8 @@ jobs:
         echo "overridden variable : $OVERRIDE_VAR"
         echo "variable from shell environment : $env_var"
         echo "environment name : $STAGING_ENV"
+    env:
+        STAGING_ENV:  ${{ vars.STAGING_ENV }}
 
         
     - name: ${{ vars.HELLO_WORLD_STEP }}
