@@ -5,7 +5,7 @@ on:
 
 env:
   env_var: ${{ vars.ENV_CONTEXT_VAR }}
-  REPOSITORY_VAR: ${{ vars.REPOSITORY_VAR }}
+  REPOSITORY_v: ${{ vars.REPOSITORY_VAR }}
   ORGANIZATION_VAR: ${{ vars.ORGANIZATION_VAR }}
   OVERRIDE_VAR: ${{ vars.OVERRIDE_VAR }}
 
@@ -18,7 +18,7 @@ jobs:
     steps:
     - name: Use variables
       run: |
-        echo "repository variable : $REPOSITORY_VAR"
+        echo "repository variable : $REPOSITORY_v"
         echo "organization variable : $ORGANIZATION_VAR"
         echo "overridden variable : $OVERRIDE_VAR"
         echo "variable from shell environment : $env_var"
@@ -34,4 +34,4 @@ jobs:
       run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "this is : $REPOSITORY_VAR.."
+          echo "this is : $REPOSITORY_v.."
