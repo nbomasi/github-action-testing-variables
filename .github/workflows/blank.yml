@@ -12,7 +12,8 @@ env:
 
 jobs:
   display-variables:
-    environment: staging
+    environment: production
+    #environment: staging
     name: ${{ vars.JOB_NAME }}
     if: ${{ vars.USE_VARIABLES == 'true' }}
     runs-on: ${{ vars.RUNNER }}
